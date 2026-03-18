@@ -5,11 +5,11 @@ Simulation of the landing of gimballed PX4 quadcopters on boats in a Gazebo wave
 
 Below are the steps to integrate the [asv_wave_sim](https://github.com/srmainwaring/asv_wave_sim) world with a PX4 drone on Ubuntu 24.04:
 
-1. Install ROS 2 Jazzy,
-2. Install ros-gz, which installs Gazebo Harmonic
-3. Install PX4 https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html 
+1. Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html),
+2. Install [ros-gz](https://github.com/gazebosim/ros_gz/tree/jazzy), which installs Gazebo Harmonic
+3. Install [PX4](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html)
 4. `cd PX4-Autopilot & export GZ_VERSION=harmonic # optionally add to ~/.bashrc`
-5. Install asv_wave_sim and the rs750 sailboat model:
+5. Run the following to install [asv_wave_sim](https://github.com/srmainwaring/asv_wave_sim) and the [rs750](https://github.com/srmainwaring/rs750) sailboat model:
 
    ```sudo apt-get update
    sudo apt-get install libcgal-dev libfftw3-dev
@@ -49,13 +49,13 @@ Below are the steps to integrate the [asv_wave_sim](https://github.com/srmainwar
    ```
 Then paste into waves.sdf the provided file (this ensures the file is created in your own directory originally)
 
-7. Install QGroundControl https://docs.px4.io/main/en/dev_setup/qgc_daily_build.html 
+7. Install [QGroundControl](https://docs.px4.io/main/en/dev_setup/qgc_daily_build.html) 
    ```
    chmod +x QGroundControl.AppImage 
    ./QGroundControl.AppImage
    ```
 
-## Common issues/Important Notes
+## Common issues / Important Notes
 
 1. Make sure you don’t have duplicate plugins: either they are included in PX4-Autopilot/src/modules/simulation/gz_bridge/server.config file OR in your sdf file, not both; likely the server.config will already contain everything. Duplicates prevent the video stream from working.
 
@@ -86,6 +86,8 @@ make
 sudo make install
 sudo ldconfig /usr/local/lib/
 ```
+
+# Running the Simulation
 
 Once installation is complete, you can run the following to start the full simulation:
 
