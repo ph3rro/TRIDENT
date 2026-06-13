@@ -1,4 +1,4 @@
-# Drone Landing on Boats with PX4 and Gazebo
+# TRIDENT: Trained RL Inference for Dynamic Environment Naval Touchdown.
 Simulation of the landing of gimballed PX4 quadcopters on boats in a Gazebo wave environment using both basic heuristic and reinforcement learning techniques.
 
 ## Installation
